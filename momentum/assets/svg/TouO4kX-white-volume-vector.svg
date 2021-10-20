@@ -1,0 +1,11 @@
+<?xml version="1.0"?><svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+ <title>White Volume</title>
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#ffffff" fill-rule="nonzero" stroke-miterlimit="5.7" y="203.21817" x="37.157988" width="321.52448" ry="15.066265" id="rect1308" height="186.93285"/>
+  <path fill="#ffffff" fill-rule="nonzero" stroke-miterlimit="5.7" id="rect3839" d="m104.453857,294.815186l254.228668,-272.921951l0,551.45192l-254.228668,-274.79129l0,-3.738678z"/>
+  <path fill="none" fill-rule="nonzero" stroke="#ffffff" stroke-width="15.509223" stroke-miterlimit="5.7" id="path4688" d="m459.163483,564.131653c0.695282,0.00531 1.242157,0 1.93866,0c148.589142,0 269.085052,-120.883606 269.085052,-269.472748c0,-148.589203 -120.495911,-269.085068 -269.085052,-269.085068"/>
+  <path fill="none" fill-rule="nonzero" stroke="#ffffff" stroke-width="11.631918" stroke-miterlimit="5.7" id="path4708" d="m440.245392,478.255859c0.468811,0.00354 0.837555,0 1.30719,0c100.19223,0 181.441376,-81.51062 181.441437,-181.70285c0,-100.1922 -81.249207,-181.441376 -181.441437,-181.441376"/>
+  <path fill="none" fill-rule="nonzero" stroke="#ffffff" stroke-width="7.754611" stroke-miterlimit="5.7" id="path4710" d="m421.778168,390.61261c0.235291,0.001831 0.420349,0 0.656067,0c50.282837,0 91.058868,-40.907227 91.058868,-91.190094c0,-50.282867 -40.776031,-91.058899 -91.058868,-91.058899"/>
+ </g>
+</svg>

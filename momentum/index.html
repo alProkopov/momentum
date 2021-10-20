@@ -11,15 +11,44 @@
   <body>
     <header class="header">
       <div class="player">
-        <div class="player-controls">
-          <button class="play-prev player-icon"></button>
-          <button class="play player-icon"></button>
-          <button class="play-next player-icon"></button>
+        <div class="song-name">some text</div>
+        <div class="player-container">
+          <div class="player-controls">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+          <div class="progress">
+            <input
+              type="range"
+              class="duration-progress"
+              min="0"
+              max=""
+              value="0"
+              onchange="changeProgress()"
+            />
+            <div class="progress-timer">
+              <div class="current-time">0:00</div>
+              <div class="duration-time">0:39</div>
+            </div>
+          </div>
+          <div class="volume">
+            <button class="mute-button"></button>
+            <input
+              type="range"
+              class="volume-progress"
+              min="0"
+              max="1"
+              step="0.01"
+              style="height: 4px"
+            />
+          </div>
         </div>
         <ul class="play-list"></ul>
       </div>
+
       <div class="weather">
-        <input type="text" class="city" placeholder="[Enter city name]"/>
+        <input type="text" class="city" placeholder="[Enter city name]" />
         <i class="weather-icon owf"></i>
         <div class="weather-error"></div>
         <div class="description-container">
@@ -55,6 +84,5 @@
     <script type="module" src="js/weather.js"></script>
     <script type="module" src="js/quote.js"></script>
     <script type="module" src="js/player.js"></script>
-
   </body>
 </html>
