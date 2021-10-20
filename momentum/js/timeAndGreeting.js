@@ -1,3 +1,6 @@
+import getTimeOfDay from "./modules/getTimeOfDay.js";
+import showGreeting from "./modules/showGreeting.js";
+
 function showTime() {
   const timeFragment = document.querySelector(".time");
   const date = new Date();
@@ -21,20 +24,7 @@ function showDate(params) {
   setTimeout(showDate, 1000);
 }
 
-function showGreeting() {
-  const greetingFragment = document.querySelector(".greeting");
-  const date = new Date();
-  const hours = date.getHours();
-  console.log(hours);
 
-  function getTimeOfDay(hours) {
-    if (hours < 6) return "night";
-    if (hours < 12) return "morning";
-    if (hours < 18) return "day";
-    return "evening";
-  }
-  greetingFragment.textContent = `Good ${getTimeOfDay(hours)},`;
-}
 
 function setLocalStorage(params) {
   const name = document.querySelector(".name");
@@ -48,9 +38,7 @@ function getLocalStorage(params) {
   }
 }
 
-
-
-window.addEventListener('beforeunload', setLocalStorage)
-window.addEventListener('load', getLocalStorage)
+window.addEventListener("beforeunload", setLocalStorage);
+window.addEventListener("load", getLocalStorage);
 
 showTime();
