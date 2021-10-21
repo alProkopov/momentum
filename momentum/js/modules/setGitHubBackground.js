@@ -4,6 +4,7 @@ import getRandomNum from "./getRandomNum.js";
 function setGitHubBackground() {
   const prevArrow = document.querySelector(".slide-prev");
   const nextArrow = document.querySelector(".slide-next");
+  const selectedBackground = document.querySelector(".background-select");
 
   let backgroundNum = getRandomNum(1, 20).toString().padStart(2, "0");
 
@@ -19,12 +20,15 @@ function setGitHubBackground() {
   }
 
   function getSlidePrev() {
+    console.log(selectedBackground.value);
+    if (selectedBackground.value != "gitHub") return;
     backgroundNum--;
     backgroundNum = backgroundNum.toString().padStart(2, "0");
     backgroundNum < 1 ? (backgroundNum = 20) : setBackground();
   }
 
   function getSlideNext() {
+    if (selectedBackground.value != "gitHub") return;
     backgroundNum++;
     backgroundNum = backgroundNum.toString().padStart(2, "0");
     backgroundNum > 20 ? (backgroundNum = 1) : setBackground();

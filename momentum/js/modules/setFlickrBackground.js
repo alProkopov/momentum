@@ -1,21 +1,21 @@
 import getRandomNum from "./getRandomNum.js";
+let api = "2178805732895c405ad40272d41af6ef";
 
-function setUnsplashBackground(params) {
+function setFlickrBackground(params) {
   const prevArrow = document.querySelector(".slide-prev");
   const nextArrow = document.querySelector(".slide-next");
   const tag = document.querySelector(".background-tag");
-  const selectedBackground = document.querySelector(".background-select");
-
-  let backgroundNum = getRandomNum(0, 3);
-
   async function getBackground() {
-    const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tag.value}&client_id=Gh1Wu6YNiIamfFPmotquNKaBXY6uHb5ekOu093sLscg&count=4`;
+    const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=2178805732895c405ad40272d41af6ef&tags=${tag.value}&extras=url_l&format=json&nojsoncallback=1`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
+    let backgroundNum = getRandomNum(0, data.photos.photo.length - 1);
+    const selectedBackground = document.querySelector(".background-select");
 
     function setBackground() {
       const img = new Image();
-      img.src = data[backgroundNum].urls.regular;
+      img.src = data.photos.photo[backgroundNum].url_l;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${img.src}')`;
       };
@@ -23,25 +23,27 @@ function setUnsplashBackground(params) {
     setBackground();
     prevArrow.addEventListener("click", getSlidePrev);
     nextArrow.addEventListener("click", getSlideNext);
+    // prevArrow.removeEventListener("click", getSlidePrev);
+    // nextArrow.removeEventListener("click", getSlideNext);
 
     console.log(backgroundNum);
 
     function getSlidePrev() {
-      if (selectedBackground.value != "unsplash") return;
-      document.body.style.backgroundImage = 'none'
+      console.log(tag.value);
+      if (selectedBackground.value != "flickr") return;
       backgroundNum--;
       console.log(backgroundNum);
 
       backgroundNum < 0
-        ? ((backgroundNum = 3), setBackground())
+        ? ((backgroundNum = data.photos.photo.length - 1), setBackground())
         : setBackground();
     }
 
     function getSlideNext() {
-      if (selectedBackground.value != "unsplash") return;
+      if (selectedBackground.value != "flickr") return;
       backgroundNum++;
       console.log(backgroundNum);
-      backgroundNum > 3
+      backgroundNum > data.photos.photo.length - 1
         ? ((backgroundNum = 0), setBackground())
         : setBackground();
     }
@@ -49,4 +51,4 @@ function setUnsplashBackground(params) {
   getBackground();
 }
 
-export default setUnsplashBackground;
+export default setFlickrBackground;
