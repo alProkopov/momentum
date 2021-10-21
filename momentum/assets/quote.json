@@ -1,58 +1,86 @@
 [
   {
-    "text": "Tаити, Tаити… Не были мы ни в какой Таити! Нас и здесь неплохо кормят.",
-    "author": "Возвращение блудного попугая"
+    "ru":{"text": "Tаити, Tаити… Не были мы ни в какой Таити! Нас и здесь неплохо кормят.",
+    "author": "Возвращение блудного попугая"},
+    "en":{"text": "Tahiti! Tahiti! We have never been on Tahiti. We are well fed here!",
+      "author": "Return of the prodigal parrot"}
   },
   {
-    "text": "Не очень-то вежливо уходить из гостей сразу, как только ты наелся.",
-    "author": "Винни-Пух и все-все-все"
+    "ru":{"text": "Свободу попугаям!",
+    "author": "Возвращение блудного попугая"},
+    "en":{"text": "Freedom to parrots!",
+      "author": "Return of the prodigal parrot"}
   },
     {
-    "text": "Никто не может грустить, когда у него есть воздушный шарик!",
-    "author": "Винни-Пух и все-все-все"
+      "ru":{"text": "Я тучка, тучка, тучка, я вовсе не медведь.",
+    "author": "Винни-Пух и все-все-все"},
+    "en":{"text": " I'm a little cloud, a little cloud, a little cloud, I'm not at all a bear.",
+      "author": "Winnie-The-Pooh and All, All, All"}
   },
   {
-    "text": "Кажется, дождь собирается...",
-    "author": "Винни-Пух и все-все-все"
+    "ru":{"text": "Кажется, дождь собирается...",
+    "author": "Винни-Пух и все-все-все"},
+    "en":{"text": "It looks like it's going to rain...",
+      "author": "Winnie-The-Pooh and All, All, All"}
   },
   {
-    "text": "Щас спою!",
-    "author": "Жил-был пёс"
+    "ru":{"text": "Щас спою!",
+    "author": "Жил-был пёс"},
+    "en":{"text": "Now I'm going to sing!",
+      "author": "There once was a dog"}
   },
   {
-    "text": "Ты заходи, если что!",
-    "author": "Жил-был пёс"
+    "ru":{"text": "Ты это...Заходи, если что!",
+      "author": "Жил-был пёс"},
+    "en":{"text": "Well, you... Drop in on if you need anything else!",
+      "author": "There once was a dog"}
   },
   {
-    "text": "А мы тут, знаете, все плюшками балуемся…",
-    "author": "Малыш и Карлсон"
+    "ru":{"text": "Спокойствие, только спокойствие",
+    "author": "Малыш и Карлсон"},
+    "en":{"text": "Don't panic, just don't panic!",
+      "author": "Junior and Karlson"}
   },
   {
-    "text": "Пустяки, дело-то житейское!",
-    "author": "Малыш и Карлсон"
+    "ru":{"text": "Он улетел, но обещал вернуться... ",
+      "author": "Малыш и Карлсон"},
+      "en":{"text": "He flew away, but he promised to come back...",
+        "author": "Junior and Karlson"}
   },
   {
-    "text": "Ребята, давайте жить дружно!",
-    "author": "Кот Леопольд"
+    "ru":{"text": "Леопольд, выходи, подлый трус!",
+      "author": "Приключения кота Леопольда"},
+    "en":{"text": "Leopold, come out! You are a sneaky coward!",
+      "author": "Adventures of Cat Leopold"}
   },
   {
-    "text": "Леопольд! Выходи, подлый трус!",
-    "author": "Кот Леопольд"
+    "ru":{"text": "Ребята, давайте жить дружно!",
+      "author": "Приключения кота Леопольда"},
+    "en":{"text": "Guys, let's get along!",
+      "author": "Adventures of Cat Leopold"}
   },
   {
-    "text": "Лучший мой подарочек - это ты!",
-    "author": "Ну, погоди!"
+    "ru":{"text": "Лучший мой подарочек - это ты!",
+      "author": "Ну, погоди!"},
+    "en":{"text": "Guys, let's get along!",
+      "author": "Well, just you wait!"}
   },
   {
-    "text": "Усы, лапы и хвост — вот мои документы!",
-    "author": "Простоквашино"
+    "ru":{"text": "Усы, лапы и хвост — вот мои документы!",
+      "author": "Трое из Простоквашино"},
+    "en":{"text": "Whiskers, paws and tail, these are my documents!",
+      "author": "Three from Prostokvashino"}
   },
   {
-    "text": "Поздравляю тебя, Шарик, ты балбес!",
-    "author": "Простоквашино"
+    "ru":{"text": "Поздравляю тебя, Шарик, ты балбес!",
+      "author": "Трое из Простоквашино"},
+    "en":{"text": "I congratulate you, Sharik, you are a booby.",
+      "author": "Three from Prostokvashino"}
   },
   {
-    "text": "- Не ходи туда, там тебя ждут неприятности.\n- Ну как же туда не ходить? Они же ждут!",
-    "author": "Котёнок по имени Гав"
+    "ru":{"text": "Ну, заяц, погоди",
+      "author": "Ну, погоди!"},
+    "en":{"text": "Well, hare, wait!",
+      "author": "Well, just you wait!"}
   }
 ]

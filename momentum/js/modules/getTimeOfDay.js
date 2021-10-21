@@ -1,3 +1,6 @@
+import hash from "./translation.js";
+
+// console.log(Object.keys(translate));
 function getTimeOfDay(hours) {
   if (hours < 6) return "night";
   if (hours < 12) return "morning";

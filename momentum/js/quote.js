@@ -1,4 +1,5 @@
 import getRandomNum from "./modules/getRandomNum.js";
+import hash from "./modules/translation.js";
 
 const quoteFragment = document.querySelector(".quote");
 const authorFragment = document.querySelector(".author");
@@ -11,8 +12,10 @@ async function getQuotes() {
 
   let randomNum = getRandomNum(0, data.length-1);
 
-  quoteFragment.textContent = `"${data[randomNum].text}"`;
-  authorFragment.textContent = `© ${data[randomNum].author}`;
+  quoteFragment.textContent = `"${data[randomNum][`${hash}`].text}"`;
+  authorFragment.textContent = `© ${data[randomNum][`${hash}`].author}`;
+  console.log(data[0].en.author);
+  console.log(hash);
 }
 
 changeQuoteButton.addEventListener("click", getQuotes);

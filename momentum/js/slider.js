@@ -4,7 +4,7 @@ import getRandomNum from "./modules/getRandomNum.js";
 const prevArrow = document.querySelector(".slide-prev");
 const nextArrow = document.querySelector(".slide-next");
 
-let backgroundNum = getRandomNum(0, 20).toString().padStart(2, "0");
+let backgroundNum = getRandomNum(1, 20).toString().padStart(2, "0");
 
 function setBackground(params) {
   const date = new Date();

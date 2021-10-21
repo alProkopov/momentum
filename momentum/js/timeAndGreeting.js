@@ -1,5 +1,6 @@
 import getTimeOfDay from "./modules/getTimeOfDay.js";
 import showGreeting from "./modules/showGreeting.js";
+import hash from "./modules/translation.js";
 
 function showTime() {
   const timeFragment = document.querySelector(".time");
@@ -17,9 +18,11 @@ function showDate(params) {
   const dateFragment = document.querySelector(".date");
   const date = new Date();
   const options = { weekday: "long", month: "long", day: "numeric" }; //timeZone:'UTC'
-  const currentDate = date.toLocaleDateString("en-En", options);
+  const currentDate = date.toLocaleDateString(`${hash}`, options);
+  let result = currentDate[0].toUpperCase() + currentDate.slice(1)
 
-  dateFragment.textContent = currentDate;
+  dateFragment.textContent = result;
+
 
   setTimeout(showDate, 1000);
 }

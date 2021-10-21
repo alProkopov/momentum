@@ -46,9 +46,12 @@
         </div>
         <ul class="play-list"></ul>
       </div>
-
+      <select name="" id="" class="language">
+        <option class="en-language" value="en">EN</option>
+        <option class="ru-language" value="ru">RU</option>
+      </select>
       <div class="weather">
-        <input type="text" class="city" placeholder="[Enter city name]" />
+        <input type="text" class="city" value="Moscow" placeholder="[Enter city name]" />
         <i class="weather-icon owf"></i>
         <div class="weather-error"></div>
         <div class="description-container">
@@ -78,7 +81,7 @@
         <div class="author"></div>
       </div>
     </footer>
-
+    <script type="module" src="./js/modules/translation.js"></script>
     <script type="module" src="js/timeAndGreeting.js"></script>
     <script type="module" src="js/slider.js"></script>
     <script type="module" src="js/weather.js"></script>

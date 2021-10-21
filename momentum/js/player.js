@@ -121,7 +121,7 @@ function updateProgress() {
   durationProgress.value = audio.currentTime;
   currentTime.textContent = formatTime(audio.currentTime);
   durationTime.textContent = formatTime(audio.duration);
-  console.log(audio.duration);
+  
 
   if (audio.currentTime == audio.duration) playNext();
 }
