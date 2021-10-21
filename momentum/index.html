@@ -50,6 +50,11 @@
         <option class="en-language" value="en">EN</option>
         <option class="ru-language" value="ru">RU</option>
       </select>
+      <select name="" id="" class="background-select">
+        <option class="gitHub-img" value="gitHub">GitHub</option>
+        <option class="ru-language" value="unsplash">Unsplash</option>
+        <option class="ru-language" value="flickr">Flickr</option>
+      </select>
       <div class="weather">
         <input type="text" class="city" value="Moscow" placeholder="[Enter city name]" />
         <i class="weather-icon owf"></i>
@@ -67,8 +72,8 @@
         <button class="slide-prev slider-icon"></button>
         <button class="slide-next slider-icon"></button>
       </div>
-      <time class="time">123123</time>
-      <date class="date">123123</date>
+      <time class="time"></time>
+      <date class="date"></date>
       <div class="greeting-container">
         <span class="greeting"></span>
         <input type="text" class="name" placeholder="[Enter name]" />
@@ -83,9 +88,10 @@
     </footer>
     <script type="module" src="./js/modules/translation.js"></script>
     <script type="module" src="js/timeAndGreeting.js"></script>
-    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/setBackground.js"></script>
     <script type="module" src="js/weather.js"></script>
     <script type="module" src="js/quote.js"></script>
     <script type="module" src="js/player.js"></script>
+    <script type="module" src="./js/modules/unsplashAPI.js"></script>
   </body>
 </html>

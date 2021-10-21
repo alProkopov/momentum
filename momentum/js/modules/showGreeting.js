@@ -23,12 +23,15 @@ const translate = {
 
 
 function showGreeting() {
+  const selectLanguage = document.querySelector(".language");
+  let newHash = selectLanguage.value;
+
   const greetingFragment = document.querySelector(".greeting");
   const date = new Date();
   const hours = date.getHours();
 
-  
-  greetingFragment.textContent = translate[`${getTimeOfDay(hours)}`][hash];
+
+  greetingFragment.textContent = translate[`${getTimeOfDay(hours)}`][newHash];
 }
 
 export default showGreeting;
