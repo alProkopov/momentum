@@ -6,10 +6,10 @@ function setUnsplashBackground(params) {
   const tag = document.querySelector(".background-tag");
   const selectedBackground = document.querySelector(".background-select");
 
-  let backgroundNum = getRandomNum(0, 3);
+  let backgroundNum = getRandomNum(0, 4);
 
   async function getBackground() {
-    const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tag.value}&client_id=Gh1Wu6YNiIamfFPmotquNKaBXY6uHb5ekOu093sLscg&count=4`;
+    const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tag.value}&client_id=Gh1Wu6YNiIamfFPmotquNKaBXY6uHb5ekOu093sLscg&count=5`;
     const res = await fetch(url);
     const data = await res.json();
 
@@ -21,30 +21,14 @@ function setUnsplashBackground(params) {
       };
     }
     setBackground();
-    prevArrow.addEventListener("click", getSlidePrev);
-    nextArrow.addEventListener("click", getSlideNext);
 
-    console.log(backgroundNum);
-
-    function getSlidePrev() {
-      if (selectedBackground.value != "unsplash") return;
-      document.body.style.backgroundImage = 'none'
-      backgroundNum--;
-      console.log(backgroundNum);
-
-      backgroundNum < 0
-        ? ((backgroundNum = 3), setBackground())
-        : setBackground();
+    function getNewSlide() {
+      backgroundNum = getRandomNum(0, 4);
+      setBackground();
     }
 
-    function getSlideNext() {
-      if (selectedBackground.value != "unsplash") return;
-      backgroundNum++;
-      console.log(backgroundNum);
-      backgroundNum > 3
-        ? ((backgroundNum = 0), setBackground())
-        : setBackground();
-    }
+    prevArrow.addEventListener("click", getNewSlide);
+    nextArrow.addEventListener("click", getNewSlide);
   }
   getBackground();
 }

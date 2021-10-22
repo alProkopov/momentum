@@ -25,7 +25,7 @@
               min="0"
               max=""
               value="0"
-              onchange="changeProgress()"
+              onchange=""
             />
             <div class="progress-timer">
               <div class="current-time">0:00</div>
@@ -46,18 +46,51 @@
         </div>
         <ul class="play-list"></ul>
       </div>
-      <select name="" id="" class="language">
-        <option class="en-language" value="en">EN</option>
-        <option class="ru-language" value="ru">RU</option>
-      </select>
-      <select name="" id="" class="background-select">
-        <option class="gitHub-img" value="gitHub">GitHub</option>
-        <option class="ru-language" value="unsplash">Unsplash</option>
-        <option class="ru-language" value="flickr">Flickr</option>
-      </select>
-      <input type="text" class="background-tag" value="white">
+      <div class="setting-box">
+        <button class="app-settings"></button>
+        <div class="settings-container toggleInterface">
+          <div class="uiSettings">
+            <p>Select UI:</p>
+            <div class="ui-buttons">
+              <button value=".player" class="ui-player ui-icon"></button>
+              <button value=".date" class="ui-date ui-icon"></button>
+              <button value=".time" class="ui-time ui-icon"></button>
+              <button value=".greetings" class="ui-greetings ui-icon"></button>
+              <button value=".quoter" class="ui-quoter ui-icon"></button>
+              <button value=".weather" class="ui-weather ui-icon"></button>
+            </div>
+          </div>
+          <div class="vl"></div>
+          <div class="settings">
+            <div class="language-setting">
+              <span>Language: </span>
+              <select name="" id="" class="language">
+                <option class="en-language" value="en">EN</option>
+                <option class="ru-language" value="ru">RU</option>
+              </select>
+            </div>
+            <div class="api-setting">
+              <span>Photo Source: </span>
+              <select name="" id="" class="background-select">
+                <option class="gitHub-img" value="gitHub">GitHub</option>
+                <option class="ru-language" value="unsplash">Unsplash</option>
+                <option class="ru-language" value="flickr">Flickr</option>
+              </select>
+            </div>
+            <div class="tag-setting">
+              <span>Key word: </span>
+              <input type="text" class="background-tag" value="white" />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="weather">
-        <input type="text" class="city" value="Moscow" placeholder="[Enter city name]" />
+        <input
+          type="text"
+          class="city"
+          value="Moscow"
+          placeholder="[Enter city name]"
+        />
         <i class="weather-icon owf"></i>
         <div class="weather-error"></div>
         <div class="description-container">
@@ -75,12 +108,12 @@
       </div>
       <time class="time"></time>
       <date class="date"></date>
-      <div class="greeting-container">
+      <div class="greetings">
         <span class="greeting"></span>
         <input type="text" class="name" placeholder="[Enter name]" />
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer quoter">
       <button class="change-quote"></button>
       <div>
         <div class="quote"></div>
@@ -94,5 +127,6 @@
     <script type="module" src="js/quote.js"></script>
     <script type="module" src="js/player.js"></script>
     <script type="module" src="./js/modules/test.js"></script>
+    <script src="./js/settings.js"></script>
   </body>
 </html>

@@ -31,7 +31,8 @@ function showDate(params) {
 
 function setLocalStorage(params) {
   const name = document.querySelector(".name");
-  localStorage.setItem("name", name.value);
+  if (name.value) localStorage.setItem("name", name.value);
+  if (!name.value) localStorage.setItem("name", '');
 }
 
 function getLocalStorage(params) {
@@ -45,3 +46,5 @@ window.addEventListener("beforeunload", setLocalStorage);
 window.addEventListener("load", getLocalStorage);
 
 showTime();
+const name = document.querySelector(".name");
+name.addEventListener("change", setLocalStorage);

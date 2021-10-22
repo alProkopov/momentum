@@ -1,7 +1,7 @@
 import getTimeOfDay from "./getTimeOfDay.js";
 import getRandomNum from "./getRandomNum.js";
 
-function setGitHubBackground() {
+
   const prevArrow = document.querySelector(".slide-prev");
   const nextArrow = document.querySelector(".slide-next");
   const selectedBackground = document.querySelector(".background-select");
@@ -38,6 +38,6 @@ function setGitHubBackground() {
   nextArrow.addEventListener("click", getSlideNext);
 
   setBackground();
-}
 
-export default setGitHubBackground;
+
+export default setBackground;

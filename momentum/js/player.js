@@ -121,7 +121,7 @@ function updateProgress() {
   durationProgress.value = audio.currentTime;
   currentTime.textContent = formatTime(audio.currentTime);
   durationTime.textContent = formatTime(audio.duration);
-  
+
 
   if (audio.currentTime == audio.duration) playNext();
 }
@@ -140,7 +140,8 @@ function changeProgress() {
   audio.currentTime = durationProgress.value;
 }
 
-setInterval(updateProgress, 1000);
+setInterval(updateProgress, 2000);
+durationProgress.addEventListener('change',changeProgress)
 playBtn.addEventListener("click", playAudio);
 prevBtn.addEventListener("click", playPrev);
 nextBtn.addEventListener("click", playNext);
@@ -170,5 +171,4 @@ function chooseSong(e){
 
   songTitle.textContent=e.target.textContent
   playAudio()
-  stopPropagation()
 }

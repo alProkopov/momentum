@@ -1,4 +1,4 @@
-import setGitHubBackground from "./modules/setGitHubBackground.js";
+import setBackground from "./modules/setGitHubBackground.js";
 import setUnsplashBackground from "./modules/setUnsplashBackground.js";
 import setFlickrBackground from "./modules/setFlickrBackground.js";
 
@@ -11,7 +11,7 @@ function changeBackground() {
   switch (selectedBackground.value) {
     case "gitHub":
       document.body.style.backgroundImage = "none";
-      setGitHubBackground();
+      setBackground();
       break;
     case "unsplash":
       document.body.style.backgroundImage = "none";
@@ -50,6 +50,8 @@ function getLocalStorage(params) {
 
 tag.addEventListener("change", changeBackground);
 tag.addEventListener("change", (e)=>location.reload());
+selectedBackground.addEventListener("change", (e)=>location.reload());
+
 
 window.addEventListener("beforeunload", setLocalStorage);
 window.addEventListener("load", getLocalStorage);
