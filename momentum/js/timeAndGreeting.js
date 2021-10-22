@@ -15,24 +15,23 @@ function showTime() {
 }
 
 function showDate(params) {
+  const selectLanguage = document.querySelector(".language");
+  let newHash = selectLanguage.value;
   const dateFragment = document.querySelector(".date");
   const date = new Date();
   const options = { weekday: "long", month: "long", day: "numeric" }; //timeZone:'UTC'
-  const currentDate = date.toLocaleDateString(`${hash}`, options);
-  let result = currentDate[0].toUpperCase() + currentDate.slice(1)
+  const currentDate = date.toLocaleDateString(`${newHash}`, options);
+  let result = currentDate[0].toUpperCase() + currentDate.slice(1);
 
   dateFragment.textContent = result;
-
 
   setTimeout(showDate, 1000);
 }
 
-
-
 function setLocalStorage(params) {
   const name = document.querySelector(".name");
   if (name.value) localStorage.setItem("name", name.value);
-  if (!name.value) localStorage.setItem("name", '');
+  if (!name.value) localStorage.setItem("name", "");
 }
 
 function getLocalStorage(params) {
@@ -48,3 +47,5 @@ window.addEventListener("load", getLocalStorage);
 showTime();
 const name = document.querySelector(".name");
 name.addEventListener("change", setLocalStorage);
+
+export default showTime;

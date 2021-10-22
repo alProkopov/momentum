@@ -122,7 +122,6 @@ function updateProgress() {
   currentTime.textContent = formatTime(audio.currentTime);
   durationTime.textContent = formatTime(audio.duration);
 
-
   if (audio.currentTime == audio.duration) playNext();
 }
 
@@ -141,7 +140,7 @@ function changeProgress() {
 }
 
 setInterval(updateProgress, 2000);
-durationProgress.addEventListener('change',changeProgress)
+durationProgress.addEventListener("change", changeProgress);
 playBtn.addEventListener("click", playAudio);
 prevBtn.addEventListener("click", playPrev);
 nextBtn.addEventListener("click", playNext);
@@ -151,24 +150,27 @@ volumeProgress.addEventListener("mousemove", volumeHandler);
 volumeProgress.addEventListener("change", volumeHandler);
 muteButton.addEventListener("click", volumeToggle);
 
-playListFragment.addEventListener('click', chooseSong)
+playListFragment.addEventListener("click", chooseSong);
 
-
-function chooseSong(e){
+function chooseSong(e) {
   console.log(e.target);
 
   // isPlay == false? isPlay=true: isPlay=false
   playNum = e.target.value;
   audio.src = playList[playNum].src;
-  if (!e.target.classList.contains('item-active')) {isPlay=false}
-  console.log(e.target.classList.contains('item-active'));
+  if (!e.target.classList.contains("item-active")) {
+    isPlay = false;
+  }
+  console.log(e.target.classList.contains("item-active"));
 
-  document.querySelectorAll('.play-item').forEach(item=>item.classList.remove('item-active'))
+  document
+    .querySelectorAll(".play-item")
+    .forEach((item) => item.classList.remove("item-active"));
 
   if (playNum == e.target.value) {
     e.target.classList.add("item-active");
   }
 
-  songTitle.textContent=e.target.textContent
-  playAudio()
+  songTitle.textContent = e.target.textContent;
+  playAudio();
 }
