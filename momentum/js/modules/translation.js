@@ -2,6 +2,8 @@ import getQuotes from "../quote.js";
 import getWeather from "../weather.js";
 import showGreeting from "./showGreeting.js";
 import showTime from "../timeAndGreeting.js";
+import linksTranslation from "../links.js";
+import settingsTranslation from "../settings.js";
 
 const selectLanguage = document.querySelector(".language");
 const allLanguages = ["en", "ru"];
@@ -41,6 +43,8 @@ function changeLanguage(params) {
   getWeather();
   showGreeting();
   showTime();
+  linksTranslation();
+  settingsTranslation();
 }
 changeLanguage();
 

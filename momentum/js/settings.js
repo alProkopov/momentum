@@ -24,8 +24,8 @@ const state = {
 
 function toggleInterface(e) {
   this.classList.toggle("toggleUiButton");
-  const interface = document.querySelector(this.value);
-  interface.classList.toggle("toggleInterface");
+  this.interface = document.querySelector(this.value);
+  this.interface.classList.toggle("toggleInterface");
 
   state.UI[this.value] = !state.UI[this.value];
   // localStorage.setItem(this.value, state.UI[this.value]);
@@ -40,19 +40,20 @@ function setLocalStorage() {
 function getLocalStorage(params) {
   for (let key in state.UI) {
     const isTrue = JSON.parse(localStorage.getItem(key));
-
-    const interface = document.querySelector(key);
+    console.log(isTrue);
+    this.interface = document.querySelector(key);
     const button = document.querySelector(".ui-" + key.substr(1));
-
+    console.log(button.classList);
+    console.log(state.UI[key]);
     if (isTrue) {
       state.UI[key] = true;
       button.classList.remove("toggleUiButton");
-      interface.classList.remove("toggleInterface");
+      this.interface.classList.remove("toggleInterface");
     }
     if (!isTrue) {
       state.UI[key] = false;
       button.classList.add("toggleUiButton");
-      interface.classList.add("toggleInterface");
+      this.interface.classList.add("toggleInterface");
     }
     // if (localStorage.getItem(key)) console.log(localStorage.getItem(key));
   }
@@ -74,3 +75,30 @@ settingButton.addEventListener("click", toggleContainer);
 function toggleContainer() {
   settingContainer.classList.toggle("toggleInterface");
 }
+
+//перевод
+const uiTranslate = document.querySelector(".uiSettings p");
+const langTranslate = document.querySelector(".language-setting span");
+const sourceTranslate = document.querySelector(".api-setting span");
+const keyWordTranslate = document.querySelector(".tag-setting span");
+
+const translation = {
+  SelectUI: { ru: "Интерфейс", en: "Select UI" },
+  Language: { ru: "Язык", en: "Language" },
+  PhotoSource: { ru: "Фото-ресурс", en: "Photo source" },
+  KeyWord: { ru: "тэг", en: "Key word" },
+};
+
+function settingsTranslation() {
+  const selectLanguage = document.querySelector(".language");
+  let newHash = selectLanguage.value;
+
+  uiTranslate.textContent = translation.SelectUI[newHash];
+  langTranslate.textContent = translation.Language[newHash];
+  sourceTranslate.textContent = translation.PhotoSource[newHash];
+  keyWordTranslate.textContent = translation.KeyWord[newHash];
+}
+
+settingsTranslation();
+
+export default settingsTranslation;

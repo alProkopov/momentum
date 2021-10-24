@@ -421,7 +421,9 @@ body {
   visibility: hidden;
   transition: 0.5s;
 }
-
+.uiSettings {
+  min-width: 110px;
+}
 .ui-icon {
   width: 20px;
   height: 20px;
@@ -489,7 +491,9 @@ body {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
+.settings {
+  min-width: 195px;
+}
 .settings span {
   opacity: 0.7;
 }
@@ -523,9 +527,7 @@ body {
   margin-bottom: 10px;
   opacity: 0;
 }
-.link-list-container{
 
-}
 .link-button {
   display: block;
   margin-right: 15px;
@@ -579,7 +581,7 @@ body {
   opacity: 0.5;
   cursor: pointer;
 }
-.link-item{
+.link-item {
   display: flex;
   justify-content: space-between;
 }
@@ -588,9 +590,9 @@ body {
   color: black;
   cursor: pointer;
 }
-.link-item-delete{
+.link-item-delete {
   opacity: 0.5;
-  color:#cc0000;
+  color: #cc0000;
   cursor: pointer;
 }
 
@@ -637,10 +639,9 @@ body {
 .link-invalid {
   color: #cc0000;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
   margin: 0;
   padding: 0;
-
 }
 .input-group,
 .input-url {
@@ -674,7 +675,7 @@ body {
 
 .opacityForm {
   opacity: 1;
-  transition: .5s;
+  transition: 0.5s;
 }
 .opacityFormOff {
   opacity: 0;
