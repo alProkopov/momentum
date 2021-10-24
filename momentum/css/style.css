@@ -291,7 +291,7 @@ body {
   margin-bottom: 10px;
   font-size: 1.6rem;
   opacity: 0.5;
-  transition: .5s;
+  transition: 0.5s;
 }
 .player-container {
   display: flex;
@@ -682,4 +682,42 @@ body {
 }
 .opacityFormOff {
   opacity: 0;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* border-top: 1px solid rgba(255, 255, 255, .5); */
+  background:rgba(255, 255, 255, .2);
+
+  padding: 5px 20px;
+  /* padding-bottom: 0; */
+}
+
+.rsschool {
+  background-image: url("../assets/svg/rs_school_js.svg");
+  background-size: 50px 20px;
+  width: 50px;
+  height: 20px;
+}
+.year{
+  /* transform: translate(50%); */
+  text-decoration: none;
+  color:#fff;
+  opacity: 0.8;
+
+}
+.github{
+  background-image: url("../assets/svg/GitHub-Emblem.png");
+  background-size: 50px 30px;
+  width: 50px;
+  height: 30px;
+  opacity: 0.8;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
