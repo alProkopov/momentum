@@ -1,4 +1,5 @@
 import getRandomNum from "./getRandomNum.js";
+import getTimeOfDay from  './getTimeOfDay.js'
 
 function setUnsplashBackground(params) {
   const prevArrow = document.querySelector(".slide-prev");
@@ -8,8 +9,13 @@ function setUnsplashBackground(params) {
 
   let backgroundNum = getRandomNum(0, 4);
 
+  const date = new Date();
+    const hours = date.getHours();
+    const timeOfDay = getTimeOfDay(hours);
+
+
   async function getBackground() {
-    const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tag.value}&client_id=Gh1Wu6YNiIamfFPmotquNKaBXY6uHb5ekOu093sLscg&count=5`;
+    const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tag.value||timeOfDay}&client_id=Gh1Wu6YNiIamfFPmotquNKaBXY6uHb5ekOu093sLscg&count=5`;
     const res = await fetch(url);
     const data = await res.json();
 
