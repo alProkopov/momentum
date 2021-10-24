@@ -146,6 +146,8 @@ body {
 
 .weather-error {
   margin-top: -10px;
+  color: #cc0000;
+  opacity: 0;
 }
 
 .description-container {

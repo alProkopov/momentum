@@ -6,6 +6,7 @@ const tempFragment = document.querySelector(".temperature");
 const descriptFragment = document.querySelector(".weather-description");
 const windFragment = document.querySelector(".wind");
 const humidityFragment = document.querySelector(".humidity");
+const errorFragment = document.querySelector(".weather-error");
 
 const translation = {
   WindSpeed: { ru: "Скорость ветра", en: "Wind speed" },
@@ -21,7 +22,9 @@ async function getWeather() {
   const res = await fetch(url);
   const data = await res.json();
 
-
+  data.cod == 200
+    ? errorFragment.classList.remove("opacityForm")
+    : errorFragment.classList.add("opacityForm");
   weatherIcon.className = "weather-icon owf";
   weatherIcon.classList.add(`owf-${data.weather[0].id}`);
   tempFragment.textContent = `${Math.round(data.main.temp)}°C`;
@@ -33,6 +36,20 @@ async function getWeather() {
     data.main.humidity
   }%`;
 }
+
+function setLocalStorage(params) {
+  const cityFragment = document.querySelector(".city");
+  localStorage.setItem("city", cityFragment.value);
+}
+
+function getLocalStorage(params) {
+  if (localStorage.getItem("city")) {
+    cityFragment.value = localStorage.getItem("city");
+  }
+}
+
+window.addEventListener("beforeunload", setLocalStorage);
+window.addEventListener("load", getLocalStorage);
 cityFragment.addEventListener("change", getWeather);
 getWeather();
 
