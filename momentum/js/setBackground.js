@@ -4,21 +4,26 @@ import setFlickrBackground from "./modules/setFlickrBackground.js";
 
 const selectedBackground = document.querySelector(".background-select");
 const tag = document.querySelector(".background-tag");
+const tagInput = document.querySelector(".background-tag");
 
 function changeBackground() {
-      // location.reload()
+  // location.reload()
 
   switch (selectedBackground.value) {
     case "gitHub":
       document.body.style.backgroundImage = "none";
+      tagInput.disabled = true;
       setBackground();
       break;
     case "unsplash":
       document.body.style.backgroundImage = "none";
+      tagInput.disabled = false;
 
       setUnsplashBackground();
       break;
     case "flickr":
+      tagInput.disabled = false;
+
       document.body.style.backgroundImage = "none";
 
       setFlickrBackground();
@@ -35,7 +40,6 @@ function setLocalStorage(params) {
   const tag = document.querySelector(".background-tag");
   localStorage.setItem("selectedBackground", selectedBackground.value);
   localStorage.setItem("selectedTag", tag.value);
-
 }
 
 function getLocalStorage(params) {
@@ -49,9 +53,8 @@ function getLocalStorage(params) {
 }
 
 tag.addEventListener("change", changeBackground);
-tag.addEventListener("change", (e)=>location.reload());
-selectedBackground.addEventListener("change", (e)=>location.reload());
-
+tag.addEventListener("change", (e) => location.reload());
+selectedBackground.addEventListener("change", (e) => location.reload());
 
 window.addEventListener("beforeunload", setLocalStorage);
 window.addEventListener("load", getLocalStorage);

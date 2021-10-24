@@ -287,10 +287,11 @@ body {
 }
 
 .song-name {
-  text-align: start;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 10px;
   font-size: 1.6rem;
-  opacity: 0.8;
+  opacity: 0.5;
+  transition: .5s;
 }
 .player-container {
   display: flex;
