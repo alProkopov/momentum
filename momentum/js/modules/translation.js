@@ -26,7 +26,7 @@ function changeURL() {
 
 function changeLanguage(params) {
   let hash = window.location.hash.substr(1);
-  console.log(hash);
+
   if (!allLanguages.includes(hash)) {
     location.href = window.location.pathname + "#en";
     // location.reload();

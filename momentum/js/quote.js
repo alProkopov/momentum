@@ -10,12 +10,12 @@ async function getQuotes() {
   const data = await res.json();
   const selectLanguage = document.querySelector(".language");
   let newHash = selectLanguage.value;
-  console.log(newHash);
+
   let randomNum = getRandomNum(0, data.length - 1);
 
   quoteFragment.textContent = `"${data[randomNum][`${newHash}`].text}"`;
   authorFragment.textContent = `© ${data[randomNum][`${newHash}`].author}`;
-  console.log(data[0].en.author);
+ 
 }
 
 changeQuoteButton.addEventListener("click", getQuotes);

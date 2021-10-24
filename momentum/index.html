@@ -113,11 +113,48 @@
         <input type="text" class="name" placeholder="[Enter name]" />
       </div>
     </main>
-    <footer class="footer quoter">
-      <button class="change-quote"></button>
-      <div>
-        <div class="quote"></div>
-        <div class="author"></div>
+    <footer class="footer">
+      <div class="quote-container quoter">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="link-container">
+        <div class="link-inner-container">
+          <div class="link-list-container"></div>
+          <ul class="link-list">
+            <li class="link-new-link">+ New Link</li>
+          </ul>
+          <div class="link-add-containter">
+            <button class="link-prev-button">←</button>
+            <span class="link-invalid">Enter 'Name' and 'LINKS'</span>
+            <div class="input-group">
+              <label>Name</label>
+              <input
+                type="text"
+                id="new-title"
+                class="new-title new-group-title"
+                autocomplete="off"
+                placeholder=""
+              />
+            </div>
+            <div class="input-url">
+              <label>LINKS</label>
+              <input
+                type="text"
+                id="new-title"
+                class="new-url new-group-url"
+                autocomplete="off"
+                placeholder="example.com"
+              />
+            </div>
+            <button class="create-link">Create</button>
+          </div>
+        </div>
+
+        <button class="link-button">Links</button>
       </div>
     </footer>
     <script type="module" src="./js/modules/translation.js"></script>
@@ -128,5 +165,6 @@
     <script type="module" src="js/player.js"></script>
     <script type="module" src="./js/modules/test.js"></script>
     <script src="./js/settings.js"></script>
+    <script src="./js/links.js"></script>
   </body>
 </html>

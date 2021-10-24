@@ -5,9 +5,8 @@ const uiGreeting = document.querySelector(".ui-greetings");
 const uiQuote = document.querySelector(".ui-quoter");
 const uiWeather = document.querySelector(".ui-weather");
 
-const settingButton = document.querySelector('.app-settings')
-const settingContainer= document.querySelector('.settings-container')
-
+const settingButton = document.querySelector(".app-settings");
+const settingContainer = document.querySelector(".settings-container");
 
 const state = {
   language: "en",
@@ -32,20 +31,19 @@ function toggleInterface(e) {
   // localStorage.setItem(this.value, state.UI[this.value]);
 }
 
-  function setLocalStorage(){
+function setLocalStorage() {
   for (let key in state.UI) {
     localStorage.setItem(key, state.UI[key]);
   }
-  }
+}
 
 function getLocalStorage(params) {
   for (let key in state.UI) {
     const isTrue = JSON.parse(localStorage.getItem(key));
-    console.log(isTrue);
+
     const interface = document.querySelector(key);
     const button = document.querySelector(".ui-" + key.substr(1));
-    console.log(button.classList);
-    console.log(state.UI[key]);
+
     if (isTrue) {
       state.UI[key] = true;
       button.classList.remove("toggleUiButton");
@@ -71,9 +69,8 @@ uiGreeting.addEventListener("click", toggleInterface);
 uiQuote.addEventListener("click", toggleInterface);
 uiWeather.addEventListener("click", toggleInterface);
 
-settingButton.addEventListener('click', toggleContainer)
-
+settingButton.addEventListener("click", toggleContainer);
 
 function toggleContainer() {
-  settingContainer.classList.toggle('toggleInterface')
+  settingContainer.classList.toggle("toggleInterface");
 }
